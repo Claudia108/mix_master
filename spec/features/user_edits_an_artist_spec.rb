@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "user edits an artist" do
   scenario "they see the page for the individual artist" do
-    artist             = Artist.create(name: "Bob Marley", image_path: "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg")
+    artist          = Artist.create(name: "Bob Marley", image_path: "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg")
     new_artist_name = "Michael Jackson"
 
     visit artist_path(artist.id)
