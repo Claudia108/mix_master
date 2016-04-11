@@ -2,6 +2,8 @@
 <p>Add a new song for <% @artist.name %></p>
 
 <%= form_for ([@artist, @song]) do |f| %>
+  <%= render partial: "shared/errors", locals: { target: @song } %>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.submit %>
